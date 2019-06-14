@@ -1,0 +1,64 @@
+<Frame>
+    canvas:
+        Color:
+            rgba: 1, 1, 1, 1
+        Rectangle:
+            size: root.size
+            pos: root.pos
+        Color:
+            rgba: 0.2, 0.2, 1, 1
+        Rectangle:
+            size: root.width, root.height * 0.15
+            pos: 0, root.height - (root.height * 0.1)
+
+    Label:
+        size_hint: None, None
+        size: self.texture_size
+        font_size: 30
+        text: 'Love Calculator'
+        pos: (root.width/2) - (self.width/2), root.height - self.height - 5
+
+    TextInput:
+        size_hint: None, None
+        size: 350, 35
+        font_size: 20
+        id: first
+        hint_text: 'First Name'
+        pos: 10, root.height * 0.8
+
+    TextInput:
+        size_hint: None, None
+        size: 350, 35
+        font_size: 20
+        id: second
+        hint_text: 'Second Name'
+        pos: 10, root.height * 0.7
+
+    Button:
+        text: 'Calculate'
+        color: 0, 1, 0.5, 1
+        size_hint: None, None
+        size: 100, 60
+        font_size: 20
+        pos: root.width - self.width - 80, root.height * 0.72
+        on_release: root.calculate()
+
+    Label:
+        text: ''
+        opacity: 1
+        size_hint: None, None
+        id: error
+        font_size: 20
+        size: 350, 30
+        pos: root.width/2 - self.width/2, root.height/2 - self.height/2 + 20
+        color: 0, 0, 0, 1
+
+    Label:
+        text: ''
+        opacity: 1
+        size_hint: None, None
+        id: per
+        size: 350, 30
+        font_size: 40
+        pos: root.width/2 - self.width/2, root.height/2 - self.height/2 - 50
+        color: 0, 0, 0, 1
