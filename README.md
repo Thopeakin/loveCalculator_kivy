@@ -1,6 +1,6 @@
 # love calculator
 
-An application that calculates the love between two entities
+An application that calculates the love between two names. It is totally not random
 
 ## Getting Started
 
